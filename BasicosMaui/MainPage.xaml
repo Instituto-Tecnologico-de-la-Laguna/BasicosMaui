@@ -1,0 +1,66 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="BasicosMaui.MainPage"
+             Title="Controles Basicos Maui">
+    <ScrollView>
+        <VerticalStackLayout Padding="20" Spacing="16">
+            
+            <!-- Etiqueta informativa-->
+            <Label Text="Registro de Usuario"
+                   FontSize="24"
+                   FontAttributes="Bold"
+                   HorizontalTextAlignment="Center"
+                   TextColor="Blue"/>
+
+            <!-- Entrada del nombre -->
+            <Label Text="Nombre: "
+                   FontSize="15"/>
+            <Entry x:Name="entradaNombre" 
+                   Placeholder="Escribe tu nombre"
+                 />
+
+            
+            <!-- Entrada del número -->
+            <Label Text="Edad" 
+                   FontSize="15"/>
+            <Entry x:Name="entradaEdad"
+                   Placeholder="Escribe tu edad"
+                   Keyboard="Numeric"
+                   />
+            
+            <!--Switch para recibir notificaciones-->
+            <HorizontalStackLayout Spacing="10">
+                <Label Text="Recibir Notificaciones: "
+                       VerticalOptions="Center"/>
+                <Switch x:Name="switchNotificaciones"
+                      />    
+            </HorizontalStackLayout>
+
+            <!-- Slide para definir nivel de experiencia-->
+            <Label Text="Nivel de Experiencia: "/>
+            <Slider x:Name="slideExperiencia"
+                    Minimum="0"
+                    Maximum="10"
+                    />
+            <Label x:Name="lblExperiencia" Text="Nivel: 0"/>
+            
+            <!-- Boton para guardar informacion-->
+            <Button Text="Guardar" 
+                    Background="BlueViolet"
+                    TextColor="White"
+                    CornerRadius="10"
+                    /> 
+            
+            <!--Mostrar resultados -->
+            <Frame BorderColor="Orange"
+                CornerRadius="8"
+                Padding="12">
+                <Label x:Name="lblResultado"
+                       Text="Aqui aparecen los resultados"
+                       LineBreakMode="WordWrap"
+                       />
+            </Frame>
+        </VerticalStackLayout>        
+    </ScrollView>
+</ContentPage>
