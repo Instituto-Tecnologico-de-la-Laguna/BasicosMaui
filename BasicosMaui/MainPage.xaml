@@ -50,7 +50,8 @@
                    Text="Nivel: 0"/>
             
             <!-- Boton para guardar informacion-->
-            <Button Text="Guardar" 
+            <Button Text="Guardar"
+                    Clicked="OnGuardarClick"
                     Background="BlueViolet"
                     TextColor="White"
                     CornerRadius="10"
